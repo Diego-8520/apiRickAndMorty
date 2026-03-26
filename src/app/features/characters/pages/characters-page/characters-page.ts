@@ -20,9 +20,13 @@ export class CharactersPage implements OnInit {
   }
 
   loadCharacters(): void {
+    console.log('Entró a loadCharacters');
+
     this.rickmortyService.getCharacters().subscribe({
       next: (response) => {
+        console.log('Respuesta de la API:', response);
         this.characters = response.results;
+        console.log('Personajes guardados:', this.characters);
       },
       error: (error) => {
         console.error('Error al obtener personajes:', error);
