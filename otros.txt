@@ -1,1 +1,0 @@
-npx @angular/cli@latest new apiRickAndMorty
